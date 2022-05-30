@@ -24,16 +24,35 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
       <span
         style={{ background: dotColor }}
         className='absolute inline-flex rounded-full h-2 w-2 right-2 top-2'
-      >
+      />
         {icon}
-      </span>
     </button>
   </TooltipComponent>
 )
 
 const Navbar = () => {
 
-  const { activeMenu, setActiveMenu } = useStateContext()
+  const { activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick, screenSize, setScreenSize } = useStateContext()
+
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth) 
+
+    window.addEventListener('resize', handleResize) //we track all of the resize options. If it resizes, then we call the handle resize function.
+
+    handleResize() //figures out initial width
+
+    //We must remove the event listener when the component is unmounted.
+    return () => window.removeEventListener('resize', handleResize)
+  }, []);
+
+  // We need to track the change of the screen size. IF the screen size is lower than 900, set the active menu to false (off)
+  useEffect(() => {
+    if (screenSize < 900) {
+      setActiveMenu(false)
+    } else {
+      setActiveMenu(true)
+    }
+  }, [screenSize]);
 
   return (
     <div className='flex justify-between p-2 md:mx-6 relative'>
@@ -86,7 +105,12 @@ const Navbar = () => {
             </p>
             <MdKeyboardArrowDown className='text-gray-400 text-14' />
           </div>
-        </TooltipComponent>               
+        </TooltipComponent>   
+
+        {isClicked.cart && <Cart />}            
+        {isClicked.chat && <Chat />}            
+        {isClicked.notification && <Notification />}            
+        {isClicked.userProfile && <UserProfile />}            
       </div>
     </div>
   )
