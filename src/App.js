@@ -36,11 +36,7 @@ const App = () => {
           )}
 
           {/* Navigation Bar */}
-          {/* <div className={
-            activeMenu ? 'dark:bg-main-bg bg-main-bg min-h-screen md:ml-72 w-full' 
-            : 'dark:bg-main-bg bg-main-bg min-h-screen w-full flex-2'
-          }> */}
-          {/* instead of the above, we can use a template string to reduce the amount of code. So if the menu is active, apply 'md:ml-72'. If it's not active, apply 'flex-2' */}
+        
           <div className={
             `dark:bg-main-bg bg-main-bg min-h-screen w-full ${activeMenu ? 'md:ml-72' : 'flex-2'}`
           }>
