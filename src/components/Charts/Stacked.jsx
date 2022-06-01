@@ -1,3 +1,4 @@
+// The commented out code is from the video, but doesn't work. The working code is from the video repo. 
 // import React from 'react'
 // import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, StackingColumnSeries, Tooltip  } from '@syncfusion/ej2-react-charts';
 
@@ -8,7 +9,7 @@
 //     <ChartComponent
 //       width={width}
 //       height={height}
-//       id="stacked-chart"
+//       id="charts"
 //       primaryXAxis={stackedPrimaryXAxis}
 //       primaryYAxis={stackedPrimaryYAxis}
 //       chartArea={{ border: { width: 0 } }} // remove border
@@ -27,6 +28,7 @@
 // }
 
 // export default Stacked
+
 
 import React from 'react';
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, StackingColumnSeries, Tooltip } from '@syncfusion/ej2-react-charts';

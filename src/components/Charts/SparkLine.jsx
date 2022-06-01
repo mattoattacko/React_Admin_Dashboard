@@ -1,3 +1,4 @@
+// The commented out code is from the video, but doesn't work. The working code is from the video repo. 
 // import React from 'react'
 // import { SparklineComponent, Inject, SparklineTooltip } from '@syncfusion/ej2-react-charts';
 
