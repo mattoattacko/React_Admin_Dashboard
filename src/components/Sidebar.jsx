@@ -8,7 +8,7 @@ import { links } from '../data/dummy'
 
 const Sidebar = () => {
 
-  const { activeMenu, setActiveMenu, screenSize } = useStateContext();
+  const { activeMenu, setActiveMenu, screenSize, currentColor } = useStateContext();
 
   const handleCloseSidebar = () => {
     if(activeMenu && screenSize <= 900 ) {
@@ -43,15 +43,23 @@ const Sidebar = () => {
                 {item.title}
               </p>
               {item.links.map((link) => (
-                <NavLink 
+                <NavLink //navlink is a special component belonging to react-router-dom
                   to={`/${link.name}`} 
                   key={link.name} 
                   onClick={handleCloseSidebar} 
+
+                  // This is what allows all of our sidebar buttons to have the same color as the color we choose to display in the settings.
+                  style={({ isActive }) => ({ 
+                    backgroundColor: isActive ? currentColor : '' 
+                  })}
+
                   className={({ isActive }) => 
                     isActive ? activeLink : normalLink}
                 >
                   {link.icon}
-                  <span className='capitalize'>{link.name}</span>
+                  <span className='capitalize'>
+                    {link.name}
+                  </span>
                 </NavLink>
               ))}
             </div>

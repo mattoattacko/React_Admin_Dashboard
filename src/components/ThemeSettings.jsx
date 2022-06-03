@@ -82,7 +82,7 @@ const ThemeSettings = () => {
                     type='button'
                     className='h-10 w-10 rounded-full cursor-pointer'
                     style={{ backgroundColor: item.color }}
-                    onClick={() => setColor(item.color)} //set the color
+                    onClick={() => setColor(item.color)} //set the color. We are passing in the color.
                   > 
                     {/* we show or hide this depending if the color we are on is the selected color. So if the item.color is = to the currentColor, make it a block level element. If not, set it to hidden with no check mark. We only see the checkmark for the currently selected color. */}
                     <BsCheck className={`ml-2 text-2xl text-white ${item.color === currentColor ? 'block' : 'hidden' }`} />

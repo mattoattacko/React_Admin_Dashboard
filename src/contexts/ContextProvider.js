@@ -25,16 +25,31 @@ export const ContextProvider = ({ children }) => {
 
   const [themeSettings, setThemeSettings] = useState(false);
 
-  const setMode = () => {
+
+  // We don't use (e) here because we don't need to use the event. We are passing in 'item.color' to our onClick function in ThemeSettings. 'item.color' is a string, not an event. So when we come here there is no reason to destructure the event using 'e.target.value'. We can just call it 'mode' and pass in the mode.
+  // const setMode = (e) => {
+  //   setCurrentMode(e.target.value);
+
+  //   localStorage.setItem('themeMode', e.target.value); //set the mode in local storage
+
+  //   setThemeSettings(false); //close the settings
+  // }  
+  
+  //so instead of above we do
+  const setMode = (e) => {
     setCurrentMode(e.target.value);
 
     localStorage.setItem('themeMode', e.target.value); //set the mode in local storage
-  }  
-  
-  const setColor = () => {
-    setCurrentColor(e.target.value);
 
-    localStorage.setItem('colorMode', e.target.value); //set the color in local storage
+    setThemeSettings(false); //close the settings
+  }
+
+  const setColor = (color) => {
+    setCurrentColor(color);
+
+    localStorage.setItem('colorMode', color); //set the color in local storage
+
+    setThemeSettings(false); //close the settings
   }
 
   // We cant do:
