@@ -159,17 +159,21 @@ export const areaPrimaryYAxis = {
   labelStyle: { color: 'gray' },
 
 };
+
 export const barPrimaryXAxis = {
   valueType: 'Category',
   interval: 1,
   majorGridLines: { width: 0 },
 };
+
 export const barPrimaryYAxis = {
   majorGridLines: { width: 0 },
   majorTickLines: { width: 0 },
   lineStyle: { width: 0 },
   labelStyle: { color: 'transparent' },
 };
+
+// Inflation //
 const areaChartData = [
   [
     { x: new Date(2002, 0, 1), y: 2.2 },
@@ -242,19 +246,19 @@ export const areaCustomSeries = [
 
 export const barChartData = [
   [
-    { x: 'USA', y: 46 },
-    { x: 'GBR', y: 27 },
-    { x: 'CHN', y: 26 },
+    { x: 'USA', y: 39 },
+    { x: 'Japan', y: 27 },
+    { x: 'China', y: 38 },
   ],
   [
-    { x: 'USA', y: 37 },
-    { x: 'GBR', y: 23 },
-    { x: 'CHN', y: 18 },
+    { x: 'USA', y: 41 },
+    { x: 'Japan', y: 14 },
+    { x: 'China', y: 32 },
   ],
   [
-    { x: 'USA', y: 38 },
-    { x: 'GBR', y: 17 },
-    { x: 'CHN', y: 26 },
+    { x: 'USA', y: 33 },
+    { x: 'Japan', y: 17 },
+    { x: 'China', y: 18 },
   ],
 ];
 
@@ -304,27 +308,27 @@ export const barCustomSeries = [
 ];
 export const colorMappingData = [
   [
-    { x: 'Jan', y: 6.96 },
-    { x: 'Feb', y: 8.9 },
-    { x: 'Mar', y: 12 },
-    { x: 'Apr', y: 17.5 },
-    { x: 'May', y: 22.1 },
-    { x: 'June', y: 25 },
-    { x: 'July', y: 29.4 },
-    { x: 'Aug', y: 29.6 },
-    { x: 'Sep', y: 25.8 },
-    { x: 'Oct', y: 21.1 },
-    { x: 'Nov', y: 15.5 },
-    { x: 'Dec', y: 9.9 },
+    { x: 'Jan', y: 1.4 },
+    { x: 'Feb', y: 0.3 },
+    { x: 'Mar', y: 7.52 },
+    { x: 'Apr', y: 11.04 },
+    { x: 'May', y: 15.76 },
+    { x: 'June', y: 22.55 },
+    { x: 'July', y: 24.11 },
+    { x: 'Aug', y: 23.32 },
+    { x: 'Sep', y: 19.89 },
+    { x: 'Oct', y: 13.86 },
+    { x: 'Nov', y: 7.27 },
+    { x: 'Dec', y: 4.08 },
   ],
-  ['#FFFF99'],
+  ['#800080'],
   ['#FFA500'],
   ['#FF4040'],
 ];
 
 export const rangeColorMapping = [
   { label: '1°C to 10°C',
-    start: '1',
+    start: '0.1',
     end: '10',
     colors: colorMappingData[1] },
 
@@ -5863,6 +5867,8 @@ export const financialChartData = [
     volume: 27939544,
   },
 ];
+
+// Pyramid //
 export const PyramidData = [
   { x: 'Sweet Treats', y: 120, text: '120 cal' },
   { x: 'Milk, Youghnut, Cheese', y: 435, text: '435 cal' },

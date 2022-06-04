@@ -1,4 +1,5 @@
-// The commented out code is from the video, but doesn't work. The working code is from the video repo. 
+// The commented out code is from the video, but doesn't work. The working code is from the video repo. Using the video code will cause everything on the page to vanish when messing around with the window size quickly. We would get the error 'SparklineComponent(...): nothing was returned from render.
+
 // import React from 'react'
 // import { SparklineComponent, Inject, SparklineTooltip } from '@syncfusion/ej2-react-charts';
 
