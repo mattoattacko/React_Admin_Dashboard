@@ -14,15 +14,10 @@ const initialState = {
 export const ContextProvider = ({ children }) => {
 
   const [activeMenu, setActiveMenu] = useState(true); 
-
   const [isClicked, setIsClicked] = useState(initialState);
-
   const [screenSize, setScreenSize] = useState(undefined);
-
   const [currentColor, setCurrentColor] = useState('#03C9D7'); //default color
-
   const [currentMode, setCurrentMode] = useState('Light'); //default mode
-
   const [themeSettings, setThemeSettings] = useState(false);
 
 
@@ -58,12 +53,8 @@ export const ContextProvider = ({ children }) => {
   // }
   // Because the 'isClicked' property is an {object}. We cannot override the object with a string. We need to open up the object, use the spread operator to spread the initialState (where everything is false), to spread the properties of the object. 
   // in the [] we say only change the value if it has been clicked.
-  const handleClick = (clicked) => {
-    setIsClicked({
-      ...initialState,
-      [clicked]: true
-    })
-  }
+  const handleClick = (clicked) => setIsClicked({ ...initialState, [clicked]: true });
+  
 
   //once we create the provider, we render out the children and pass the values we want to wrap our app with. 
   return (
@@ -84,6 +75,7 @@ export const ContextProvider = ({ children }) => {
         setCurrentMode,
         themeSettings,
         setThemeSettings,
+        initialState,
       }}
     >
       {children}
