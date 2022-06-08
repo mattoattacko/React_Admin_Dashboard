@@ -620,7 +620,7 @@ export const chatData = [
 export const earningData = [
   {
     icon: <MdOutlineSupervisorAccount />,
-    amount: '39,354',
+    amount: '42,069',
     percentage: '-4%',
     title: 'Customers',
     iconColor: '#03C9D7',
@@ -638,7 +638,7 @@ export const earningData = [
   },
   {
     icon: <FiBarChart />,
-    amount: '423,39',
+    amount: '42,339',
     percentage: '+38%',
     title: 'Sales',
     iconColor: 'rgb(228, 106, 118)',
