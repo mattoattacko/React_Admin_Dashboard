@@ -32,7 +32,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 
 const Navbar = () => {
 
-  const { activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick, screenSize, setScreenSize, currentColor } = useStateContext()
+  const { activeMenu, setActiveMenu, isClicked, handleClick, screenSize, setScreenSize, currentColor } = useStateContext()
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth) 
@@ -54,12 +54,15 @@ const Navbar = () => {
     }
   }, [screenSize]);
 
+  const handleActiveMenu = () => setActiveMenu(!activeMenu)
+
   return (
     <div className='flex justify-between p-2 md:mx-6 relative'>
+
       <NavButton 
         title='Menu'
         // We use this to toggle the menu. We write it out instead of just writing '{customFunc}' because not all of the NavButtons will perform the same action as this one.
-        customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)} 
+        customFunc={handleActiveMenu} 
         color={currentColor}
         icon={<AiOutlineMenu />}
       />
@@ -81,7 +84,7 @@ const Navbar = () => {
         />        
         <NavButton 
           title='Notifications'   
-          dotColor='#03C9D7' 
+          dotColor="rgb(254, 201, 15)" 
           customFunc={() => handleClick('notification')} 
           color={currentColor}
           icon={<RiNotification3Line />}

@@ -20,7 +20,7 @@ const Ecommerce = () => {
 
   const { currentColor, currentMode } = useStateContext();
   return (
-    <div className="mt-24">
+    <div className="mt-10">
       <div className="flex flex-wrap lg:flex-nowrap justify-center ">
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
           <div className="flex justify-between items-center">
@@ -310,10 +310,9 @@ const Ecommerce = () => {
             />
             <div className="mt-8">
               <p className="font-semibold text-lg">React 18 coming soon!</p>
-              <p className="text-gray-400 ">By Johnathan Doe</p>
+              <p className="text-gray-400 ">By Matt M</p>
               <p className="mt-8 text-sm text-gray-400">
-                This will be the small description for the news you have shown
-                here. There could be some great info.
+                I bet no one is reading this. If you did, email the administrator for a $20 Amazon gift card.
               </p>
               <div className="mt-3">
                 <Button
