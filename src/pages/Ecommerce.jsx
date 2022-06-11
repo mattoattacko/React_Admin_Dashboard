@@ -248,7 +248,7 @@ const Ecommerce = () => {
             </button>
           </div>
           <p className="text-xs cursor-pointer hover:drop-shadow-xl font-semibold rounded-lg w-24 bg-orange-400 py-0.5 px-2 text-gray-200 mt-10">
-            16 APR, 2021
+            16 APR, 2025
           </p>
 
           <div className="flex gap-4 border-b-1 border-color mt-6">
@@ -309,7 +309,7 @@ const Ecommerce = () => {
               alt=""
             />
             <div className="mt-8">
-              <p className="font-semibold text-lg">React 18 coming soon!</p>
+              <p className="font-semibold text-lg">New Services Coming Soon!</p>
               <p className="text-gray-400 ">By Matt M</p>
               <p className="mt-8 text-sm text-gray-400">
                 I bet no one is reading this. If you did, email the administrator for a $20 Amazon gift card.

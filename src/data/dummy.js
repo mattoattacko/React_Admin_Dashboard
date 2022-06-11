@@ -14,6 +14,7 @@ import avatar from './avatar.jpg';
 import avatar2 from './avatar2.jpg';
 import avatar3 from './avatar3.png';
 import avatar4 from './avatar4.jpg';
+import mattFixed02 from './mattFixed02.png';
 import product1 from './product1.jpg';
 import product2 from './product2.jpg';
 import product3 from './product3.jpg';
@@ -711,25 +712,25 @@ export const recentTransactions = [
 export const weeklyStats = [
   {
     icon: <FiShoppingCart />,
-    amount: '-$560',
+    amount: '$12,369',
     title: 'Top Sales',
-    desc: 'Johnathan Doe',
+    desc: 'Kris Nakamura',
     iconBg: '#FB9678',
-    pcColor: 'red-600',
+    pcColor: 'green-600',
   },
   {
     icon: <FiStar />,
-    amount: '-$560',
+    amount: '61 Units',
     title: 'Best Seller',
-    desc: 'MaterialPro Admin',
+    desc: 'MaterialPro Admin Services',
     iconBg: 'rgb(254, 201, 15)',
     pcColor: 'red-600',
   },
   {
     icon: <BsChatLeft />,
-    amount: '+$560',
+    amount: '47 Responses',
     title: 'Most Commented',
-    desc: 'Ample Admin',
+    desc: 'Project Admin',
     iconBg: '#00C292',
     pcColor: 'green-600',
   },
@@ -778,7 +779,7 @@ export const medicalproBranding = {
   data: [
     {
       title: 'Due Date',
-      desc: 'Oct 23, 2021',
+      desc: 'Oct 10, 2025',
     },
     {
       title: 'Budget',
@@ -795,11 +796,15 @@ export const medicalproBranding = {
       color: 'orange',
     },
     {
-      name: 'Angular',
-      color: '#FB9678',
+      name: 'React',
+      color: '#61DBFB',
     },
   ],
   leaders: [
+    {
+      image:
+        mattFixed02,
+    },
     {
       image:
         avatar2,
@@ -807,10 +812,6 @@ export const medicalproBranding = {
     {
       image:
         avatar3,
-    },
-    {
-      image:
-        avatar2,
     },
     {
       image:
@@ -3076,14 +3077,14 @@ export const lineChartData = [
 export const dropdownData = [
   {
     Id: '1',
-    Time: 'March 2021',
+    Time: 'March 2025',
   },
   {
     Id: '2',
-    Time: 'April 2021',
+    Time: 'April 2025',
   }, {
     Id: '3',
-    Time: 'May 2021',
+    Time: 'May 2025',
   },
 ];
 export const SparklineAreaData = [
